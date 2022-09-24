@@ -11,7 +11,6 @@ import bright from '../assets/bright.jpg';
 import studeFormat from '../assets/studeFormat.jpg';
 import {useTheme} from '@mui/material/styles';
 
-
 const Login = memo(({kcContext, i18n, ...props}: { kcContext: KcContextBase.Login; i18n: I18n } & KcProps) => {
     const {social, realm, url, usernameEditDisabled, login, auth, registrationDisabled} = kcContext;
     const theme = useTheme();
@@ -38,10 +37,10 @@ const Login = memo(({kcContext, i18n, ...props}: { kcContext: KcContextBase.Logi
 
     return (
         <Grid container height={"100vh"} width={"100%"} justifyContent={"center"}>
-            <Grid item xs={3} height={"90%"} borderRadius={5} boxShadow={1} mt={3} ml={5}
-                  sx={{backgroundColor: "white", display: {xs: "none", md: "block"}}}
+            <Grid item xs={3} borderRadius={5} boxShadow={1} mt={4} ml={5}
+                  sx={{backgroundColor: "white", maxHeight: "90%", display: {xs: "none", md: "block"}}}
             >
-                <Grid item xs={12}>
+                {/*<Grid item xs={12} border={"solid"}>*/}
                     <Grid item xs={12} p={5}>
                         <Link href={"#"}>
                             <img src={education} height={80} width={80}/>
@@ -52,10 +51,10 @@ const Login = memo(({kcContext, i18n, ...props}: { kcContext: KcContextBase.Logi
                             Välkommen tillbaks
                         </Typography>
                     </Grid>
-                    <Grid item pt={5}>
-                        <img src={studeFormat} height={"100%"} width={"100%"}/>
+                    <Grid item pt={0}>
+                        <img src={studeFormat} width={"100%"}/>
                     </Grid>
-                </Grid>
+                {/*</Grid>*/}
             </Grid>
             <Grid item xs={8} sx={{'& .card-pf': {borderRadius: 10}}}>
                 <Template
@@ -202,11 +201,11 @@ const Login = memo(({kcContext, i18n, ...props}: { kcContext: KcContextBase.Logi
                                                     name="login"
                                                     id="kc-login"
                                                     tabIndex={4}
-                                                // type="submit"
+                                                    type="submit"
                                                     value={msgStr("doLogIn")}
                                                     disabled={isLoginButtonDisabled}
                                             >
-                                                Button
+                                                {msgStr("doLogIn")}
                                             </Button>
                                             {/*<input*/}
                                             {/*    tabIndex={4}*/}

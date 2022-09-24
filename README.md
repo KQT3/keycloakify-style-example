@@ -5,15 +5,23 @@
 
 > [https://github.com/garronej/keycloakify-advanced-starter](https://github.com/garronej/keycloakify-advanced-starter).
 
+## Screens
+![login](./src/assets/keycloak-example.png)
+
 ### Uncomment mockPageId in kcContext.ts to style page
 ```
 // "mockPageId": "login.ftl",
 ```
 
-### Build keycloak
+### Setup and build keycloak
 ```
+yarn
+
+# yarn keycloak needs to be run atleast once
+# // "mockPageId": "login.ftl", needs to be comment before build
 yarn keycloak
-./build_keycloak/<project-name>.sh
+
+./build_keycloak/start_keycloak_testing_container.sh
 ```
 
 ### Build docker image and create/start

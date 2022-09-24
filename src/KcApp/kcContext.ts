@@ -15,7 +15,7 @@ export const { kcContext } = getKcContext<
     // Try with another page like "register-user-profile.ftl"
     // DON'T forget to re-comment before publishing to production.
     // You must run 'yarn keycloak' at least once before testing locally.
-    "mockPageId": "login.ftl",
+    // "mockPageId": "login.ftl",
     "mockData": [
         {
             "pageId": "login.ftl",
